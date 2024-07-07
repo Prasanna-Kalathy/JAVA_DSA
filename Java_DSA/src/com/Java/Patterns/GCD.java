@@ -18,6 +18,7 @@ public class GCD {
 			Num1 = Num2;
 			Num2 = temp;
 		}
+		input.close();
 		System.out.print(Num1);
 	}
 
