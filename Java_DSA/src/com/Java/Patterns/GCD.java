@@ -13,11 +13,10 @@ public class GCD {
 		System.out.printf("Entered values are: %d and %d", Num1, Num2);
 
 		System.out.println("\nGCD of "+ Num1 +" and "+ Num2+" are");
-		int GCD=Num2;
-		while (GCD > 0) {
-			GCD = Num1 % Num2;
+		while (Num2 > 0) {
+			int temp = Num1 % Num2;
 			Num1 = Num2;
-			Num2 = GCD;
+			Num2 = temp;
 		}
 		System.out.print(Num1);
 	}
