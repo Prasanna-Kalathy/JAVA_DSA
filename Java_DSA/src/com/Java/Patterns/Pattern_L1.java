@@ -14,13 +14,6 @@ public class Pattern_L1 {
 		input.close();
 	}
 
-
-
-
-
-
-
-
 	
 	//Reverse Right Triangle Pattern
 	public static void Pattern5(int Num) {
