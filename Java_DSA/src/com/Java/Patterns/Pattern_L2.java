@@ -8,10 +8,24 @@ public class Pattern_L2 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-
-		Pattern3(5);
-
+		Pattern4(5);
 		input.close();
+	}
+
+	// 0101 Right Triangle Pyramid
+	public static void Pattern4(int Row) {
+		int val = 1;
+		for (int line = 1; line <= Row; line++) {
+			if (line % 2 == 0)
+				val = 0;
+			else
+				val = 1;
+			for (int Star = 1; Star <= line; Star++) {
+				System.out.print(val);
+				val = 1 - val;
+			}
+			System.out.println();
+		}
 	}
 
 	// Arrow Pyramid
