@@ -9,10 +9,25 @@ public class Pattern_L2 {
 		System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
 
-		Pattern1(10);
-		Pattern2(10);
+		Pattern3(5);
 
 		input.close();
+	}
+
+	// Arrow Pyramid
+	public static void Pattern3(int Row) {
+		for (int line = 1; line <= Row; line++) {
+			for (int Star = 1; Star <= line; Star++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for (int line = 1; line <= Row; line++) {
+			for (int Star = 1; Star <= Row - line; Star++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 	}
 
 	// Pyramid Upside down Pattern
