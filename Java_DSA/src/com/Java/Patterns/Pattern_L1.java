@@ -9,7 +9,7 @@ public class Pattern_L1 {
 		System.out.println("Enter the Number: ");
 		int Num = input.nextInt();
 
-		Pattern5(Num);
+		Pattern3(Num);
 
 		input.close();
 	}
@@ -41,7 +41,7 @@ public class Pattern_L1 {
 		int val = 1;
 		for (int i = 1; i <= Num; i++) {
 			for (int j = 1; j <= i; j++) {
-				System.out.print(val);
+				System.out.print(val+" ");
 				val++;
 			}
 			System.out.println();
