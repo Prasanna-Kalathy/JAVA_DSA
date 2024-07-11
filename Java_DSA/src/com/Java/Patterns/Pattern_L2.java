@@ -8,27 +8,38 @@ public class Pattern_L2 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern1(4);
+		Pattern6(4);
 		input.close();
 	}
 
 	// 12 21 Right Triangle Pyramid
+	public static void Pattern6(int Row) {
+		for (int line = 0; line <= Row; line++) {
+			for (char Star = 'A'; Star <= 'A' + line; Star++) {
+				System.out.print(Star);
+			}
+			System.out.println();
+		}
+	}
+
+	// 12 21 Right Triangle Pyramid
 	public static void Pattern5(int Row) {
-		int space_val =	(2*(Row-1));
+		int space_val = (2 * (Row - 1));
 		for (int line = 1; line <= Row; line++) {
 			for (int Star = 1; Star <= line; Star++) {
 				System.out.print(Star);
 			}
-			for (int Space = 1; Space <= space_val ; Space++) {
+			for (int Space = 1; Space <= space_val; Space++) {
 				System.out.print(" ");
 			}
 			for (int Star = line; Star >= 1; Star--) {
 				System.out.print(Star);
 			}
 			System.out.println();
-			space_val-=2;
+			space_val -= 2;
 		}
 	}
+
 	// 0101 Right Triangle Pyramid
 	public static void Pattern4(int Row) {
 		int val = 1;
