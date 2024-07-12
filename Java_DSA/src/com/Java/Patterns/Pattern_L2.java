@@ -8,7 +8,7 @@ public class Pattern_L2 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern6(4);
+		Pattern3(4);
 		input.close();
 	}
 
