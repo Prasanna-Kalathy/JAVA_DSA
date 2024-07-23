@@ -8,8 +8,19 @@ public class Pattern_L2 {
 		Scanner input = new Scanner(System.in);
 		// System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern7(4);
+		Pattern8(4);
 		input.close();
+	}
+
+	// Right Triangle ABC Inverse
+	public static void Pattern8(int Row) {
+		for (int line = 0; line <= Row; line++) {
+			char Star = (char) ('A'+ line);
+			for (int j=0; j <= line; j++) {
+				System.out.print(Star);
+			}
+			System.out.println();
+		}
 	}
 
 	// Right Triangle ABC Inverse
@@ -21,6 +32,7 @@ public class Pattern_L2 {
 			System.out.println();
 		}
 	}
+
 	// Right triangle ABC
 	public static void Pattern6(int Row) {
 		for (int line = 0; line <= Row; line++) {
