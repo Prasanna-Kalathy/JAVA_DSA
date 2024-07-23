@@ -6,13 +6,22 @@ public class Pattern_L2 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the Number of Rows: ");
+		// System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern3(4);
+		Pattern7(4);
 		input.close();
 	}
 
-	// 12 21 Right Triangle Pyramid
+	// Right Triangle ABC Inverse
+	public static void Pattern7(int Row) {
+		for (int line = Row; line >= 0; line--) {
+			for (char Star = 'A'; Star <= 'A' + line; Star++) {
+				System.out.print(Star);
+			}
+			System.out.println();
+		}
+	}
+	// Right triangle ABC
 	public static void Pattern6(int Row) {
 		for (int line = 0; line <= Row; line++) {
 			for (char Star = 'A'; Star <= 'A' + line; Star++) {
