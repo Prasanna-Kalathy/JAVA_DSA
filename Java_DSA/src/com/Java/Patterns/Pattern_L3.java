@@ -8,8 +8,38 @@ public class Pattern_L3 {
 		Scanner input = new Scanner(System.in);
 		// System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern2(4);
+		Pattern3(5);
 		input.close();
+	}
+
+	// Space Dimond Pattern
+	public static void Pattern3(int Row) {
+		for (int i = Row; i >= 1; i--) {
+			for (int Star = 1; Star <= i; Star++) {
+				System.out.print("*");
+			}
+			for (int Space = 0; Space < (Row * 2) - i * 2; Space++) {
+				System.out.print(" ");
+			}
+			for (int Star = i; Star >= 1; Star--) {
+				System.out.print("*");
+			}
+			System.out.println();
+
+		}
+		for (int i = 1; i <= Row; i++) {
+			for (int Star = 1; Star <= i; Star++) {
+				System.out.print("*");
+			}
+			for (int Space = 0; Space < (Row * 2) - i * 2; Space++) {
+				System.out.print(" ");
+			}
+			for (int Star = i; Star >= 1; Star--) {
+				System.out.print("*");
+			}
+			System.out.println();
+
+		}
 	}
 
 	// Slope Letter Pattern
