@@ -8,8 +8,36 @@ public class Pattern_L3 {
 		Scanner input = new Scanner(System.in);
 		// System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern3(5);
+		Pattern4(5);
 		input.close();
+	}
+
+	// Inverted Space Dimond Pattern
+	public static void Pattern4(int Row) {
+		for (int i = 1; i <= Row; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			for (int Space = 0; Space < (Row * 2) - (i * 2); Space++) {
+				System.out.print(" ");
+			}
+			for (int j = i; j >= 1; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for (int i = Row - 1; i >= 1; i--) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			for (int Space = 0; Space < (Row * 2) - (i * 2); Space++) {
+				System.out.print(" ");
+			}
+			for (int j = i; j >= 1; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 	}
 
 	// Space Dimond Pattern
