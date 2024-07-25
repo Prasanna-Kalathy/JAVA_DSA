@@ -8,8 +8,18 @@ public class Pattern_L3 {
 		Scanner input = new Scanner(System.in);
 		// System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern1(4);
+		Pattern2(4);
 		input.close();
+	}
+
+	// Slope Letter Pattern
+	public static void Pattern2(int Row) {
+		for (int i = Row; i >= 0; i--) {
+			for (char j = (char) ('A' + i); j <= Row + 'A'; j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
 	}
 
 	// Pyramid Pattern
