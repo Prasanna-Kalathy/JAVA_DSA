@@ -8,8 +8,22 @@ public class Pattern_L3 {
 		Scanner input = new Scanner(System.in);
 		// System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern4(5);
+		Pattern5(4);
 		input.close();
+	}
+
+	// Rectangle Star Space Pattern
+	public static void Pattern5(int Row) {
+		for (int i = 1; i <= Row; i++) {
+			for (int j = 1; j <= Row; j++) {
+				if (i == 1 || i == Row || j == 1 || j == Row) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
 	}
 
 	// Inverted Space Dimond Pattern
