@@ -8,8 +8,22 @@ public class Pattern_L3 {
 		Scanner input = new Scanner(System.in);
 		// System.out.println("Enter the Number of Rows: ");
 		// int Row = input.nextInt();
-		Pattern5(4);
+		Pattern6(4);
 		input.close();
+	}
+
+	// Square Number Reducing Pattern
+	public static void Pattern6(int Row) {
+		for (int i = 0; i < 2 * Row - 1; i++) {
+			for (int j = 0; j < 2 * Row - 1; j++) {
+				int top = i;
+				int bootom = 2 * Row - 2 - i;
+				int left = j;
+				int right = 2 * Row - 2 - j;
+				System.out.print(Row - Math.min(Math.min(top, bootom), Math.min(left, right)));
+			}
+			System.out.println();
+		}
 	}
 
 	// Rectangle Star Space Pattern
