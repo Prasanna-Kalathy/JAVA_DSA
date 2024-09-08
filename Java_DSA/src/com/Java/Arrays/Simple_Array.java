@@ -14,5 +14,6 @@ public class Simple_Array {
 	public static void main(String[] args) {
 		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		SumArr(arr);
+		StacksArrays SArr = new StacksArrays();
 	}
 }
