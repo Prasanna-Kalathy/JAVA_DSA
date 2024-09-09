@@ -10,12 +10,11 @@ public class ConcatenationofArray {
 		}
 		System.out.println();
 		
-		int ans[] = new int[2*nums.length];
+		int n = nums.length;
+		int ans[] = new int[2*n];
 		System.out.println(ans.length);
-		for (int i = 0; i < nums.length; i++) {
-			ans[i] = nums[i];
-			ans[i+nums.length] = nums[i]; 
-		}
+		System.arraycopy(nums,0,ans,0,n);
+	    System.arraycopy(nums,0,ans,n,n);
 		for (int i = 0; i < ans.length; i++) {
 			System.out.print(ans[i] + " ");
 		}
