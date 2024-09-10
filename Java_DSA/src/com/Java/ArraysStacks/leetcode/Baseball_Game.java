@@ -1,6 +1,7 @@
 package com.Java.ArraysStacks.leetcode;
 
-import java.util.Stack;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Baseball_Game {
 
@@ -11,10 +12,10 @@ public class Baseball_Game {
 		}
 		System.out.println();
 		
-		Stack<Integer> ans = new Stack<>();
+		List<Integer> ans = new ArrayList<>();
 		for (int i = 0; i < operations.length; i++) {
 			String str =operations[i];
-			if(Character.isDigit(str.charAt(0))) {
+			if(Character.isDigit(str.charAt(0)) || str.charAt(0)=='-') {
 				ans.add(Integer.parseInt(str));
 				System.out.println("Added "+str);
 			}
@@ -38,7 +39,9 @@ public class Baseball_Game {
 		}
 		System.out.println(ans);
 		int sum = 0;
-		while (ans.size() > 0) sum += ans.pop(); //Reffered from google
+		for (int point : ans) {
+            sum += point;
+        }
 		System.out.println(sum);
 	}
 }
