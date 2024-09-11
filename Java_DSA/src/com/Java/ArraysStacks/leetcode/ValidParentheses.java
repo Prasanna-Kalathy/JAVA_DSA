@@ -10,40 +10,28 @@ public class ValidParentheses {
 	}
 
 	public static boolean IsValid(String str) {
-		Stack<Character> CharArr = new Stack<>();
-		if (str.toCharArray().length < 2)
-			return false;
-		// Adding all the characters into Stack
-		for (Character c : str.toCharArray()) {
-			if (c == '(' || c == '[' || c == '{') {
-				CharArr.push(c);
-			} else if ((c == ')' || c == ']' || c == '}')) {
-				if (CharArr.empty())
-					return false;
-				switch (c) {
-				case ')':
-					if (CharArr.getLast() == '(') {
-						CharArr.pop();
-					}
-					break;
-				case ']':
-					if (CharArr.getLast() == '[') {
-						CharArr.pop();
-					}
-					break;
-				case '}':
-					if (CharArr.getLast() == '{') {
-						CharArr.pop();
-					}
-					break;
-				default:
-					break;
-				}
-			} else
-				return false;
+		Stack<Character> stk = new Stack<>();
+        if (str.toCharArray().length < 2)
+            return false;
+        // Adding all the characters into Stack
+        for (Character c : str.toCharArray()) {
+            switch (c) {
+                case '(':
+                    stk.push(')');
+                    break;
+                case '[':
+                    stk.push(']');
+                    break;
+                case '{':
+                    stk.push('}');
+                    break;
+                default:
+                    if (stk.isEmpty() || stk.pop() != c)
+                        return false;
+                    break;
+            }
 
-		}
-//		System.out.println((CharArr.empty()) ? true : false);
-		return (CharArr.empty()) ? true : false;
-	}
+        }
+        return (stk.empty()) ? true : false;
+    }
 }
