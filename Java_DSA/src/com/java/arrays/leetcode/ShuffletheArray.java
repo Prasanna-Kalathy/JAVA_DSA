@@ -1,6 +1,4 @@
-package com.Java.Arrays.leetcode;
-
-import javax.print.attribute.standard.MediaSize.NA;
+package com.java.arrays.leetcode;
 
 public class ShuffletheArray {
 

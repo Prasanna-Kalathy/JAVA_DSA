@@ -1,4 +1,4 @@
-package com.Java.ArraysStacks.leetcode;
+package com.java.ArraysStacks.leetcode;
 
 public class Baseball_Game {
 

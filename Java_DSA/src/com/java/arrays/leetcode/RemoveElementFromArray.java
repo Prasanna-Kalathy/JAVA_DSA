@@ -1,4 +1,4 @@
-package com.Java.Arrays.leetcode;
+package com.java.arrays.leetcode;
 
 public class RemoveElementFromArray {
 

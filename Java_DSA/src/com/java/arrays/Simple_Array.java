@@ -1,4 +1,4 @@
-package com.Java.Arrays;
+package com.java.arrays;
 
 public class Simple_Array {
 

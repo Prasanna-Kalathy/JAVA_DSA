@@ -1,4 +1,4 @@
-package com.Java.Patterns;
+package com.java.Patterns;
 
 public class Multiples_of_5 {
 
