@@ -20,7 +20,7 @@ public class PairSum {
             }
         }
         System.out.println("Time Taken by Brute force Method = " + (System.nanoTime() - startTime) / 100000 + " ms");
-        return "No Pairs Found";
+        return "No Pair Found for Target: " + target;
     }
 
     public static String pairSumBetter(List<Integer> arr, int target) {
@@ -42,11 +42,31 @@ public class PairSum {
         return "No Pair Found for Target: " + target;
     }
 
+    public static String pairSumOptimal(List<Integer> arr, int target) {
+        long startTime = System.nanoTime();
+        //Creating the Hashtable
+        Map<Integer, Integer> lstMap = new HashMap<>();
+        for (int j = 0; j <= arr.size() - 1; j++) {
+            lstMap.put(arr.get(j), j);
+        }
+        for (int i = 0; i <= arr.size() - 1; i++) {
+            int num2Fnd = target - arr.get(i);
+            if (lstMap.containsKey(num2Fnd) && lstMap.get(num2Fnd) != i) {
+                System.out.println("Time Taken by Optimal Approach Method = " + (System.nanoTime() - startTime) / 100000 + " ms");
+                return "Pair Found: " + arr.get(i) + " + " + num2Fnd + " => " + target;
+            }
+        }
+        System.out.println("Time Taken by Optimal Approach Method = " + (System.nanoTime() - startTime) / 100000 + " ms");
+        return "No Pair Found for Target: " + target;
+    }
+
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(2, 4, 7, 9, 3));
-        int target = 11;
+        int target = 13;
         System.out.println("Pairsum Brute Method -> " + pairsumBrute(arr, target));
         System.out.println();
         System.out.println("Pairsum Better Method -> " + pairSumBetter(arr, target));
+        System.out.println();
+        System.out.println("Pairsum Optimal Method -> " + pairSumOptimal(arr, target));
     }
 }
