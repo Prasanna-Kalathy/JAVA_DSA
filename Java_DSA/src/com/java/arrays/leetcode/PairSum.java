@@ -44,7 +44,7 @@ public class PairSum {
 
     public static String pairSumOptimal(List<Integer> arr, int target) {
         long startTime = System.nanoTime();
-        //Creating the Hashtable
+        //Creating the Hashmap
         Map<Integer, Integer> lstMap = new HashMap<>();
         for (int j = 0; j <= arr.size() - 1; j++) {
             lstMap.put(arr.get(j), j);
@@ -60,6 +60,23 @@ public class PairSum {
         return "No Pair Found for Target: " + target;
     }
 
+    public static String pairSumOptimal2(List<Integer> arr, int target) {
+        long startTime = System.nanoTime();
+        //Creating the Hashmap
+        Map<Integer, Integer> lstMap = new HashMap<>();
+        int num2Fnd = 0;
+        for (int i = 0; i <= arr.size() - 1; i++) {
+            num2Fnd = target - arr.get(i);
+            if (lstMap.containsKey(num2Fnd)) {
+                System.out.println("Time Taken by Optimal Approach Method = " + (System.nanoTime() - startTime) / 100000 + " ms");
+                return "Pair Found in 1st Pass: " + arr.get(i) + " + " + num2Fnd + " => " + target;
+            }
+            lstMap.put(arr.get(i), i);
+        }
+        System.out.println("Time Taken by Optimal Approach Method = " + (System.nanoTime() - startTime) / 100000 + " ms");
+        return "No Pair Found for Target: " + target;
+    }
+
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(2, 4, 7, 9, 3));
         int target = 13;
@@ -68,5 +85,7 @@ public class PairSum {
         System.out.println("Pairsum Better Method -> " + pairSumBetter(arr, target));
         System.out.println();
         System.out.println("Pairsum Optimal Method -> " + pairSumOptimal(arr, target));
+        System.out.println();
+        System.out.println("Pairsum Optimal V2 Method -> " + pairSumOptimal2(arr, target));
     }
 }
